@@ -5,7 +5,7 @@ set -e
 
 # установка ruby b bundler
 apt update
-apt install ruby-full build-essential git -y
+apt install ruby-full build-essential git wget -y
 gem install --no-rdoc --no-ri bundler
 
 #установка mongodb
