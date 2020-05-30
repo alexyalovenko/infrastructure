@@ -5,7 +5,7 @@ set -e
 
 # установка ruby b bundler
 apt update
-apt install ruby-full build-essential git wget -y
+apt install ruby-full build-essential git -y
 gem install --no-rdoc --no-ri bundler
 
 #установка mongodb
@@ -16,10 +16,10 @@ apt-get install -y mongodb-org
 
 #запуск mongodb
 systemctl start mongod
-systemctl status mongod
 systemctl enable mongod
 
 #настройка сервиса raddit
 wget https://raw.githubusercontent.com/upsysops/stuff/master/raddit.service
+#chmod +x raddit.service
 mv raddit.service /etc/systemd/system/raddit.service
 

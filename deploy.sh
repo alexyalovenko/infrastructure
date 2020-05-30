@@ -10,5 +10,6 @@ cd raddit
 bundle install
 
 #запускаем сервис приложения и добавляем автозагрузку
-sudo systemctl start raddit
-sudo systemctl enable raddit
+sudo systemctl daemon-reload
+sudo systemctl start raddit.service
+sudo systemctl enable raddit.service
